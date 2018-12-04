@@ -6,40 +6,18 @@ int main () {
 	// x[][1] ¶´Í¥ºş
 	// x[][2] Ì«ºş
 	// z[][3] ºéÔóºş
-	int a[4][4] = { 3,1,2,4,2,4,3,1,1,3,2,4,1,3,4,2 };
-	int b[4][4] = { 3,1,2,4,2,4,3,1,2,3,1,4,1,3,4,2 };
-	int counta = 0;
-	int countb = 0;
-
-	for (int i = 0; i < 4; i++) {
-		int total = 0;
-		for (int j = 0; j < 4; j++) {
-			total += a[j][i];
-		}
-		if (total == 10) {
-			counta = i;
-		}
+	int a[4] = { 3,1,2,4 };
+	int b[4] = { 2,4,3,1 };
+	int c[4] = { 0,3,0,4 };
+	int d[4] = { 1,3,4,2 };
+	int i = 0;
+	for (i = 0; i < 4; i++) {
+		if (a[i] != b[i] && a[i] != c[i] && a[i] != d[i] && b[i] != c[i] && b[i] != d[i] && c[i] != d[i] && c[i] != 3 && c[i] != 4)
+			break;
 	}
-
-	for (int i = 0; i < 4; i++) {
-		int total = 0;
-		for (int j = 0; j < 4; j++) {
-			total += b[j][i];
-		}
-		if (total == 10) {
-			countb = i;
-		}
-	}
-	if (counta != 0) {
-		for (int i = 0; i < 4; i++) {
-			cout << a[i][counta] << endl;
-		}
-	}
-
-	if (countb != 0) {
-		for (int i = 0; i < 4; i++) {
-			cout << b[i][countb] << endl;
-		}
-	}
+	cout << a[i] << endl;
+	cout << b[i] << endl;
+	cout << 10-a[i]-b[i]-d[i] << endl;
+	cout << d[i] << endl;
 	return 0;
 }
