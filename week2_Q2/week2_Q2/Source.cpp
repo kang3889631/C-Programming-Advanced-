@@ -15,10 +15,12 @@ int main () {
 						cout << b << endl;
 						cout << c << endl;
 						cout << d << endl;
+						break;
 					}
 				}
 			}
 		}
+		break;
 	}
 	
 	return 0;
