@@ -2,22 +2,24 @@
 using namespace std;
 
 int main () {
-	// x[][0] Û¶Ñôºþ
-	// x[][1] ¶´Í¥ºþ
-	// x[][2] Ì«ºþ
-	// z[][3] ºéÔóºþ
-	int a[4] = { 3,1,2,4 };
-	int b[4] = { 2,4,3,1 };
-	int c[4] = { 0,3,0,4 };
-	int d[4] = { 1,3,4,2 };
-	int i = 0;
-	for (i = 0; i < 4; i++) {
-		if (a[i] != b[i] && a[i] != c[i] && a[i] != d[i] && b[i] != c[i] && b[i] != d[i] && c[i] != d[i] && c[i] != 3 && c[i] != 4)
-			break;
+	for (int a = 1; a <= 4; a++) {
+		for (int b = 1; b <= 4; b++) {
+			for (int c = 1; c <= 4; c++) {
+				for (int d = 1; d <= 4; d++) {
+					if ((a != b&&a != c&&a != d&&b != c&&b != d&&c != d) &&
+						((a == 3) + (b == 1) + (c == 2) + (d == 4) == 1)
+						&& ((a == 2) + (b == 4) + (c == 3) + (d == 1) == 1)
+						&& ((b == 3) + (d == 4) == 1)
+						&& ((a == 1) + (b == 3) + (c == 4) + (d == 2) == 1)) {
+						cout << a << endl;
+						cout << b << endl;
+						cout << c << endl;
+						cout << d << endl;
+					}
+				}
+			}
+		}
 	}
-	cout << a[i] << endl;
-	cout << b[i] << endl;
-	cout << 10-a[i]-b[i]-d[i] << endl;
-	cout << d[i] << endl;
+	
 	return 0;
 }
