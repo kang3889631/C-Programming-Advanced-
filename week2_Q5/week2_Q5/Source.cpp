@@ -13,11 +13,11 @@ int main() {
 	}
 
 	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n - 1; j++) {
-			if (a[j][1] > a[j + 1][1]) {
+		for (int j = 0; j < n-1; j++) {
+			if (a[j][1] > a[j+1][1]) {
 				double tmp = a[j][1];
-				a[j][1] = a[j + 1][1];
-				a[j + 1][1] = tmp;
+				a[j][1] = a[j+1][1];
+				a[j+1][1] = tmp;
 				double id = a[j][0];
 				a[j][0] = a[j + 1][0];
 				a[j + 1][0] = id;
@@ -26,11 +26,11 @@ int main() {
 	}
 	/*
 	for (int i = 0; i < n; i++) {
-	cout << a[i][0] << " " << a[i][1] << endl;
+		cout << a[i][0] << " " << a[i][1] << endl;
 	}
 	*/
 	double max = 0;
-	for (int i = 0; i < n - 1; i++) {
+	for (int i = 0; i < n-1; i++) {
 		if (max < a[i + 1][1] - a[i][1]) {
 			max = a[i + 1][1] - a[i][1];
 		}
@@ -43,7 +43,7 @@ int main() {
 		}
 	}
 
-	cout << n - A << endl;
+	cout << n-A << endl;
 	for (int i = A; i < n; i++) {
 		cout << a[i][0] << endl;
 	}
@@ -55,3 +55,4 @@ int main() {
 
 	return 0;
 }
+
