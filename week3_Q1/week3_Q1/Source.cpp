@@ -1,15 +1,27 @@
 #include <iostream>
 using namespace std;
-
-void reverse(char *ptr) {
-	if()
+char a[500] = { 0 };
+int i = 0;
+int reverse() {
+	char c = a[i];
+	i++;
+	if (c == ' ')
+		return 1;
+	else if (c != ' '&&c != '\0') {
+		reverse();
+		cout << c;
+	}
+	return 1;
 }
 
-int main(){
-	char a[500];
+
+int main() {
 	cin.getline(a, 500);
-	char *ptr;
-	ptr = a;
-	reverse(ptr);
+	while (a[i] != '\0') {
+		if (reverse() == 1) {
+			cout << " ";
+		}
+	}
+	cout << endl;
 	return 0;
 }
