@@ -13,15 +13,25 @@ int main() {
 				cin >> a[i][j];
 			}
 		}
-
-		for (int i = 0; i < m; i++) {
-			result += a[i][0];
-			result += a[i][n - 1];
+		if (m > 1 && n > 1) {
+			for (int i = 0; i < m; i++) {
+				result += a[i][0];
+				result += a[i][n - 1];
+			}
+			for (int i = 1; i < n - 1; i++) {
+				result += a[0][i];
+				result += a[m - 1][i];
+			}
+			cout << result << endl;
 		}
-		for (int i = 1; i < n-1; i++) {
-			result += a[0][i];
-			result += a[m-1][i];
+		else{
+			int result = 0;
+			for (int i = 0; i < m; i++) {
+				for (int j = 0; j < n; j++) {
+					result+= a[i][j];
+				}
+			}
+			cout << result << endl;
 		}
-		cout << result << endl;
 	}
 }
