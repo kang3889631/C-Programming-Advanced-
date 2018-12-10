@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 using namespace std;
 
 struct Node {
@@ -13,21 +13,21 @@ Node *Release(Node *head, int M);
 
 int main() {
 	/*
-	N:起始节点数， P：开始节点
-	每次释放第M个节点
-	创建N个节点的环
-	找到第P个节点
-	不断释放第M个元素
-	直到只剩一个元素
-	释放第M个节点
+	N:?????? P?????
+	?????M???
+	??N?????
+	???P???
+	?????M???
+	????????
+	???M???
 	*/
 	int N, P, M = 0;
 	cin >> N >> P >> M;
 	Node *head = Create(N);
 	head = Search(head, P);
-	while (head->next!=head)
+	while (head->next != head)
 	{
-		head = Release(head,M);
+		head = Release(head, M);
 	}
 	cout << head->num;
 	return 0;
