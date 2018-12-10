@@ -4,10 +4,10 @@ using namespace std;
 
 int main() {
 	int n = 0;
-	char str[1001] = { 0 };
+	char str[4001] = { 0 };
 	cin >> n;
 	cin.get();
-	cin.getline(str, 1000);
+	cin.getline(str, 4001);
 	str[strlen(str)] = '\n';
 
 	int start = 0;
@@ -27,9 +27,5 @@ int main() {
 		cout << str[start];
 		start++;
 	}
-	cout << endl;
-
-	//cout << n << endl;
-	//cout << str << endl;
 	return 0;
 }
