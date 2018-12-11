@@ -13,9 +13,6 @@ int main() {
 
 	cin >> m >> k;
 	temp = m;
-	if (temp % 19 == 0) {
-		while (temp>0) {
-			temp -= 19;
 			if (temp / 10000 == 3)
 				w = true;
 			if ((temp % 10000) / 1000 == 3)
@@ -26,12 +23,10 @@ int main() {
 				s = true;
 			if ((temp % 10) == 3)
 				g = true;
-			if (w + q + b + s + g == k) {
+			if (w + q + b + s + g == k&&temp%19==0) {
 				a = true;
-				break;
 			}
-		}
-	}
+
 	if (a == true)
 		cout << "YES" << endl;
 	else
